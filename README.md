@@ -14,8 +14,6 @@ NetMessaging API with .NET
 - Automatic Domain Services injection using "[DomainService]" annotation.
 - MediaTR : register command handlers and queries automatically (via reflection does scan of the assembly)
 - Global Exception Handler
-- Unit (Domain) tests with XUnit
-- NSubstitute for Mocking
 - Logs : Console
 - Swagger
 
@@ -27,7 +25,7 @@ Solution for VisualStudio(.sln) composed of the following folders :
 - Application : Domain Services Orchestration Layer; Ports, Commands, Queries, Handlers
 - Infrastructure : Adapters
 - Domain : Entities, Value Objects, Ports, Domain Services, Aggregates
-- Domain.Tests : Unit Tests for Domain Services
+- Function : Message reading function
 
 ## Build & Run
 
@@ -52,8 +50,7 @@ Then the following containers should be running on `docker ps`:
 | Application      | URL                                                                                |
 | ---------------- | ---------------------------------------------------------------------------------- |
 | NetMessaging API | https://localhost:8080                                                             |
-| SQL Server       | Server=localhost;User Id=sa;Password=<YourStrong!Passw0rd>;Database=ReservaTurnos; |
+| SQL Server       | Server=localhost;User Id=sa;Password=<YourStrong!Passw0rd>;Database=NetMessaging; |
 
-Connect to the SQL Server and run the script Database/GenerateTurns.sql
 
 Browse to [http://localhost:8000](http://localhost:8000) and view the swagger documentation
