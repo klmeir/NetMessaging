@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  netmessaging.api:
+    image: ${DOCKER_REGISTRY-}netmessagingapi
+    build:
+      context: .
+      dockerfile: NetMessaging.Api/Dockerfile

@@ -1,0 +1,13 @@
+@NetMessaging.Api_HostAddress = http://localhost:5017/api
+
+POST http://localhost:5017/api/turns
+Accept: application/json
+Content-Type: application/json
+
+{
+  "startDate": "15/06/2024",
+  "endDate": "30/06/2024",
+  "idService": 1
+}
+
+###
